@@ -5,6 +5,11 @@ on:
   workflow_dispatch:
 jobs:
   build:
+    environment: dev
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{ env.MYVAR }}
+      - run: echo ${{ env.SOM_VAR }}
+      - run: echo ${{ env.ENV_VAR }}
+      - run: echo ${{ env.PAS_VAR }}
+        env:
+          PAS_VAR: ${{ env.SOM_VAR }}
