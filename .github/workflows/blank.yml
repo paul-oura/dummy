@@ -8,8 +8,8 @@ jobs:
     environment: dev
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{ env.SOM_VAR }}
-      - run: echo ${{ env.ENV_VAR }}
+      - run: echo ${{ vars.SOM_VAR }}
+      - run: echo ${{ vars.ENV_VAR }}
       - run: echo ${{ env.PAS_VAR }}
         env:
-          PAS_VAR: ${{ env.SOM_VAR }}
+          PAS_VAR: ${{ vars.SOM_VAR }}
