@@ -10,6 +10,9 @@ jobs:
     steps:
       - run: echo ${{ vars.SOM_VAR }}
       - run: echo ${{ vars.ENV_VAR }}
-      - run: echo ${{ env.PAS_VAR }}
+      - run: |
+          echo ${{ env.FIR_VAR }}
+          echo ${{ env.SEC_VAR }}
         env:
-          PAS_VAR: ${{ vars.SOM_VAR }}
+          FIR_VAR: ${{ vars.SOM_VAR }}
+          SEC_VAR: ${{ vars.ENV_VAR }}
