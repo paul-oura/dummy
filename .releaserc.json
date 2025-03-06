@@ -6,11 +6,17 @@
       {
         "preset": "angular",
         "releaseRules": [
+          { "type": "automatic", "release": "patch" },
           { "type": "chore", "release": "patch" },
-          { "type": "refactor", "release": "patch" }
+          { "type": "refactor", "release": "patch" },
+          { "type": "regfix", "release": "patch" }
         ]
       }
     ],
-    "@semantic-release/release-notes-generator"
+    [
+      "@semantic-release/github",
+      { "successComment": false, "failComment": false }
+    ],
+    ["@semantic-release/release-notes-generator"]
   ]
 }
