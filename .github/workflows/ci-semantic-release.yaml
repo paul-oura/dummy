@@ -17,7 +17,7 @@ jobs:
         with:
           app-id: ${{ secrets.SEMANTIC_RELEASE_GITHUB_APP_ID }}
           private-key: ${{ secrets.SEMANTIC_RELEASE_GITHUB_APP_PRIVATE_KEY }}
-          owner: jouzen
+          owner: paul-oura
 
       - name: Create Tag and Release
         uses: cycjimmy/semantic-release-action@b1b432f13acb7768e0c8efdec416d363a57546f2 # v4.1.1
