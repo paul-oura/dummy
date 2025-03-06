@@ -18,4 +18,4 @@ jobs:
             @semantic-release/git
             @semantic-release/release-notes-generator
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
